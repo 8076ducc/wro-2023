@@ -1,5 +1,13 @@
 from devices import *
 
+def abscap(x, cap):
+    if (x > abscap):
+        return abscap
+    elif (x < -abscap):
+        return -abscap
+    else:
+        return x
+
 class PID(object):
     def __init__(
         self,
@@ -11,6 +19,8 @@ class PID(object):
         self.error = 0
         self.last_error = 0
         self.correction = 0
+        self.left=0,
+        self.right=0,
         self.loop = 0
 
     def reset_values(self):
@@ -36,6 +46,7 @@ class LineTrack(PID):
         kp=0,
         ki=0,
         kd=0,
+        slew=0,
     ):
         if reset == True:
             self.reset_values()
@@ -55,9 +66,14 @@ class LineTrack(PID):
 
             self.correction = (self.integral * ki) + self.proportional + self.derivative
 
+            left_change = (speed + self.correction) - self.left
+            self.left += abscap(left_change, slew)
+            right_change = (speed - self.correction) - self.right
+            self.right += abscap(right_change, slew)
+
             self.base.run(
-                speed + (self.correction),
-                speed - (self.correction),
+                self.left,
+                self.right,
             )
 
             self.loop += 1
