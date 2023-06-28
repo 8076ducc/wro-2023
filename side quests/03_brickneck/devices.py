@@ -2,9 +2,7 @@ from pybricks.hubs import EV3Brick
 from pybricks.ev3devices import (
     Motor,
     ColorSensor,
-    GyroSensor,
 )
-from pybricks import nxtdevices
 from pybricks.parameters import Port, Direction, Stop
 
 ev3 = EV3Brick()
@@ -15,8 +13,10 @@ base_right = Motor(Port.C)
 base_left.control.limits(1500)
 base_right.control.limits(1500)
 
-left_cs = ColorSensor(Port.S1)
-right_cs = ColorSensor(Port.S4)
+left_cs_f = ColorSensor(Port.S2)
+right_cs_f = ColorSensor(Port.S3)
+left_cs_b = ColorSensor(Port.S1)
+right_cs_b = ColorSensor(Port.S4)
 
 class Base:
     def __init__(self):

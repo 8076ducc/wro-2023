@@ -30,6 +30,8 @@ class LineTrack(PID):
         left_th,
         right_th,
         condition=lambda: True,
+        left_sensor = left_cs_f,
+        right_sensor = right_cs_f,
         reset=True,
         kp=0,
         ki=0,
@@ -38,16 +40,14 @@ class LineTrack(PID):
         if reset == True:
             self.reset_values()
 
-        self.loop = loop
-
         while condition():
             self.error = (
-                - (left_th[0] - left_cs.rgb()[0])
-                - (left_th[1] - left_cs.rgb()[1])
-                - (left_th[2] - left_cs.rgb()[2])
-                + (right_th[0] - right_cs.rgb()[0])
-                + (right_th[1] - right_cs.rgb()[1])
-                + (right_th[2] - right_cs.rgb()[2])
+                - (left_th[0] - left_sensor.rgb()[0])
+                - (left_th[1] - left_sensor.rgb()[1])
+                - (left_th[2] - left_sensor.rgb()[2])
+                + (right_th[0] - right_sensor.rgb()[0])
+                + (right_th[1] - right_sensor.rgb()[1])
+                + (right_th[2] - right_sensor.rgb()[2])
             )
             self.proportional = self.error * kp
             self.integral += self.error
