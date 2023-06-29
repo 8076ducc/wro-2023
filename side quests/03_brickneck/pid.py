@@ -39,7 +39,7 @@ class LineTrack(PID):
         speed: float,
         left_th,
         right_th,
-        condition=lambda: True,
+        condition,
         left_sensor = left_cs_f,
         right_sensor = right_cs_f,
         reset=True,
