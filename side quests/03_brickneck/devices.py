@@ -47,6 +47,6 @@ class Base:
 
         base_left.run_target(left_speed, left_angle, wait=False, then=Stop.HOLD)
         base_right.run_target(right_speed, right_angle, wait=True, then=Stop.HOLD)
-
+        base.brake()
 
 base = Base()
