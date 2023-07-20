@@ -31,6 +31,9 @@ class Base:
         self.base_left.hold()
         self.base_right.hold()
 
+    def speed(self):
+        return (self.base_left.speed() + self.base_right.speed()) / 2
+
     def angle(self):
         return (self.base_left.angle() + self.base_right.angle()) / 2
 
@@ -45,8 +48,12 @@ class Base:
     def run_target(self, left_speed, right_speed, left_angle, right_angle):
         base.reset_angle()
 
-        base_left.run_target(left_speed, left_angle, wait=False, then=Stop.HOLD)
-        base_right.run_target(right_speed, right_angle, wait=True, then=Stop.HOLD)
+        if right_angle == 0:
+            base_left.run_target(left_speed, left_angle, wait=True, then=Stop.HOLD)
+        else:
+            base_left.run_target(left_speed, left_angle, wait=False, then=Stop.HOLD)
+            base_right.run_target(right_speed, right_angle, wait=True, then=Stop.HOLD)
+
         base.brake()
 
 base = Base()
