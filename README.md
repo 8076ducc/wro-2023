@@ -6,11 +6,23 @@ This repository contains the working files and source code for ducc's ***world r
 
 ![](assets/media/back.JPG)
 
-Watch the *world record* run [here](https://www.youtube.com/watch?v=GQTzt-nbOSA).
+Watch the *world record* run [here](https://www.youtube.com/watch?v=GQTzt-nbOSA). A full 3D CAD model of our competition robot can be found in the [robot](robot) folder.
 
 ## About
 
 ducc. is a three-man team comprising Neo Hao Jun, Isaac Tan, and Ng Aaron from the Hwa Chong Robotics Club in Singapore.
+
+## Accolades
+
+We managed to clinch the following awards at the World Robot Olympiad Singapore Nationals:
+
+- Overall 3rd Runner Up
+- Judges' Award (Innovation)
+- Side Quest 3 1st Runner Up
+- Side Quest 4 Champion
+- Side Quest 5 Champion
+
+While the results we achieved were less than ideal, we would like to thank Team Clutch from Singapore Polytechnic, who will be representing Team Singapore in Panama, for being such great competitors: we learnt a lot, and it was a blast competing with you guys.
 
 ## Acknowledgements
 
