@@ -4,8 +4,9 @@
 
 This repository contains the working files and source code for ducc's ***world record* full score run** for the 2023 World Robot Olympiad (WRO) RoboMission Senior competition.
 
-
 ![](assets/media/back.JPG)
+
+Watch the *world record* run [here](https://www.youtube.com/watch?v=GQTzt-nbOSA).
 
 ## About
 
