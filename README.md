@@ -10,7 +10,7 @@ Watch the *world record* run [here](https://www.youtube.com/watch?v=GQTzt-nbOSA)
 
 ## About
 
-ducc. is a three-man team comprising Neo Hao Jun, Isaac Tan, and Ng Aaron from the Hwa Chong Robotics Club in Singapore.
+ducc. is a three-man team comprising Neo Hao Jun, Isaac Tan Jia Le, and Ng Aaron from the Hwa Chong Robotics Club in Singapore.
 
 ## Accolades
 
